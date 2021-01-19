@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`Hello Pikachu Welcome Back!`);
   client.user
-    .setActivity(`Servers : ${await client.guilds.cache.size} | Users : ${await client.users.cache.size}`, { type: "PLAYING" })
+    .setActivity(`${await client.guilds.cache.size} Servers | !help`, { type: "WATCHING" })
     .catch(error => console.log(error));
 });
 
