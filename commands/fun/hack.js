@@ -32,7 +32,7 @@ module.exports = {
           Member.user.id
         }`
       )
-      .setFooter(`Jk Don't Take It Serious Its Just Random Generated Strings!`)
+      .setFooter(`Its Fake Just Some Random Strings`)
       .setTimestamp();
 
     await message.channel.send(`Hacking Started! Hacking ${Member.user.username}`);
