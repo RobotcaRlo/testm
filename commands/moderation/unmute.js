@@ -10,7 +10,11 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
     message.delete();
-
+    if (!message.member.hasPermission("MANAGE_ROLES"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command!`
+      );
+  
     let Member =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
