@@ -10,7 +10,7 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
     message.delete();
-
+  
     let Member =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
