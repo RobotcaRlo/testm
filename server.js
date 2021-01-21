@@ -89,4 +89,11 @@ if (message.content === ">invite") {
 }
 })
 
+client.on("message", message => {
+if (message.content === ">Invite") {
+  message.channel.send("https://discord.com/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot")
+
+}
+})
+
 client.login(Token);
