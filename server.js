@@ -96,4 +96,11 @@ if (message.content === ">Invite") {
 }
 })
 
+client.on("message", message => {
+if (message.content === "simp") {
+  message.channel.send("I’m sorry for simpin but simpin what I do If you saw me how I saw you then you could be my boo One day if I’m lucky then we can go get some food  later on down the road I might just chose to marry you")
+
+}
+})
+
 client.login(Token);
