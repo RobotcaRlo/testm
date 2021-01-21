@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`Hello Pikachu Welcome Back!`);
   client.user
-    .setActivity(`${await client.guilds.cache.size} Servers | !help`, { type: "WATCHING" })
+    .setActivity(`${await client.guilds.cache.size} Servers | Simping For Pikachu | >help`, { type: "WATCHING" })
     .catch(error => console.log(error));
 });
 
@@ -81,5 +81,12 @@ client.on("message", async message => {
     `User : ${message.author.tag} (${message.author.id}) Server : ${message.guild.name} (${message.guild.id}) Command : ${command.name}`
   );
 });
+
+client.on("message", message => {
+if (message.content === ">invite") {
+  message.channel.send("https://discord.com/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot")
+
+}
+})
 
 client.login(Token);
