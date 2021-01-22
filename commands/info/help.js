@@ -4,7 +4,7 @@ const { Color, Prefix } = require("../../config.js");
 
 module.exports = {
   name: "help",
-  aliases: ["h"],
+  aliases: [],
   description: "Help Command!",
   usage: "Help | <Command Name>",
   run: async(client, message, args) => {
@@ -15,7 +15,7 @@ module.exports = {
     .setColor(Color)
     .setTitle(`${client.user.username} Commands!`)
     .setDescription(`Use ${Prefix}Help <Command Name> For More Command Information!` + 
-    "\n\n**Fun**\n`Coinflip, Howgay, Meme, Rate, Dicksize, Ascii, Hack, Randomnumber`" + "\n\n" + "**Moderation**\n`Clear, Mute, Unmute, Kick, Ban, Unban, Warn, Warnings`" + "\n\n"+
+    "\n\n**Fun**\n`Coinflip, Howgay, Meme, Rate, Dicksize, Ascii, Hack, Randomnumber, Simprate`" + "\n\n" + "**Moderation**\n`Clear, Mute, Unmute, Kick, Ban, Unban, Warn, Warnings`" + "\n\n"+
     "**Information**\n`Help, Invite, Weather, Userinfo, Serverinfo, Ping, Avatar`")
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();

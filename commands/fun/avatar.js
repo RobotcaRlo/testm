@@ -4,7 +4,7 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "avatar",
-  aliases: ["icon", "pfp"],
+  aliases: ["av", "pfp"],
   description: "Show Member Avatar!",
   usage: "Avatar | <Mention Member>",
   run: async (client, message, args) => {

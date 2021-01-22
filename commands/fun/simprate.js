@@ -20,7 +20,7 @@ module.exports = {
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Simp Machine`)
-      .setDescription(`${Member.user.username} ${Result}% Simp`)
+      .setDescription(`${Member.user.username} Is ${Result}% Simp`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 
