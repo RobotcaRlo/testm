@@ -12,7 +12,7 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.channel.send(
-        "You Don't Have Permission To Use This Command!"
+        "You Need The `Manage Messages` Permission To Use This Command!"
       );
 
     if (!args[0])

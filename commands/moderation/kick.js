@@ -12,7 +12,7 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("KICK_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        "You Need The `Kick Members` Permission To Use This Command!"
       );
 
     let Member = message.mentions.users.first();

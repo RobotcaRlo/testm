@@ -10,9 +10,9 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
     message.delete();
-    if (!message.member.hasPermission("MANAGE_ROLES"))
+    if (!message.member.hasPermission("MUTE_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        "*You Need The `Mute Members` Permission To Use This Command!*"
       );
   
     let Member =

@@ -12,7 +12,7 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("BAN_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        "You Need The `Ban Members` Permission To Use This Command!"
       );
 
     if (!args[0])
