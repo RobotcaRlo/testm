@@ -83,14 +83,14 @@ client.on("message", async message => {
 });
 
 client.on("message", message => {
-if (message.content === "p!invite") {
+if (message.content === ">invite") {
   message.channel.send("https://discord.com/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot")
 
 }
 })
 
 client.on("message", message => {
-if (message.content === "p!Invite") {
+if (message.content === ">Invite") {
   message.channel.send("https://discord.com/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot")
 
 }

@@ -12,7 +12,7 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("MUTE_MEMBERS"))
       return message.channel.send(
-        "You Need The `Mute Members` Permission To Use This Command!"
+        "*You Need The `Mute Members` Permission To Use This Command!*"
       );
   
     let Member =
