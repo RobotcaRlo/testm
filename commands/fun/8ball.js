@@ -11,7 +11,7 @@ module.exports = {
     //Start
     message.delete();
     let sizes = [
-      "As I see it, yes.",
+      "As I see it, yes,",
       "Ask again later,",
       "Better not tell you now,",
       "Cannot predict now,",
