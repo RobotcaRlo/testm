@@ -9,7 +9,6 @@ module.exports = {
   usage: "8ball <Text Here>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
     let sizes = [
       "As I see it, yes,",
       "Ask again later,",

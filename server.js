@@ -21,7 +21,7 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(`Bot Prefix : ${Prefix}`);
+    return message.channel.send(`Pika Pika The Bot Prefix Is : ${Prefix}`);
   }
 });
 
@@ -82,25 +82,5 @@ client.on("message", async message => {
   );
 });
 
-client.on("message", message => {
-if (message.content === "p!invite") {
-  message.channel.send("https://discord.com/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot")
-
-}
-})
-
-client.on("message", message => {
-if (message.content === "p!Invite") {
-  message.channel.send("https://discord.com/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot")
-
-}
-})
-
-client.on("message", message => {
-if (message.content === "simp") {
-  message.channel.send("I’m sorry for simpin but simpin what I do If you saw me how I saw you then you could be my boo One day if I’m lucky then we can go get some food  later on down the road I might just chose to marry you")
-
-}
-})
 
 client.login(Token);
