@@ -9,7 +9,11 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`Hello Pikachu Welcome Back!`);
   client.user
-    .setActivity(`${await client.guilds.cache.size} Servers | Simping For Pikachu | p!help  `, { type: "WATCHING" })
+    .setActivity(
+      `${await client.guilds.cache
+        .size} Servers | Simping For Pikachu | p!help  `,
+      { type: "WATCHING" }
+    )
     .catch(error => console.log(error));
 });
 
@@ -81,6 +85,5 @@ client.on("message", async message => {
     `User : ${message.author.tag} (${message.author.id}) Server : ${message.guild.name} (${message.guild.id}) Command : ${command.name}`
   );
 });
-
 
 client.login(Token);
