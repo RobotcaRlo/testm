@@ -14,6 +14,6 @@ module.exports.run = async (bot, message) => {
  const args = messageArray.slice(1);
 
 message.channel.setRateLimitPerUser(args[0]);
-message.channel.send('slowmode is now: $(args[0]s)');
+message.channel.send('slowmode is now on ');
   
 }
