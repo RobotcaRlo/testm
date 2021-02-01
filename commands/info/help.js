@@ -16,7 +16,7 @@ module.exports = {
     .setTitle(`${client.user.username} Commands!`)
     .setDescription(`Use ${Prefix}Help <Command Name> For More Command Information!` + 
     "\n\n**Fun**\n`Coinflip, Howgay, Meme, Rate, pp, Ascii, Hack, Randomnumber, 8ball, Simprate`" + "\n\n" + "**Moderation**\n`Clear, Mute, Unmute, Kick, Ban, Unban, Warn, Warnings`" + "\n\n"+
-    "**Information**\n`Help, Invite, Weather, Userinfo, Serverinfo, Ping, Avatar`")
+    "**Information**\n`Help, Weather, Userinfo, Serverinfo, Ping, Avatar`")
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();
     
