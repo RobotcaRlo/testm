@@ -10,6 +10,11 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
     message.delete();
+    if (!message.member.hasPermission("KICK_MEMBERS"))
+      return message.channel.send(
+        "You Need The `Kick Members` Permission To Use This Command!"
+      );
+
     let Member = message.mentions.users.first();
 
     if (!Member)
@@ -50,7 +55,6 @@ module.exports = {
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
-      message.delete();
       if (User && Member.bot === false)
         Member.send(
           `You Have Been Kicked From **${message.guild.name}** For ${Reason ||
