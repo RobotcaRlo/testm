@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`Hello Pikachu Welcome Back!`);
   client.user
-    .setPresence({activity})
+    .setPresence({ activity: { name: "Among Us" }, status: "dnd" })
     .catch(error => console.log(error));
 });
 
