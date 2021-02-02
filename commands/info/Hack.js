@@ -3,10 +3,10 @@ const { MessageEmbed } = require("discord.js");
 const { Color } = require("../../config.js");
 
 module.exports = {
-  name: "invite",
-  aliases: ["inv"],
-  description: "invite!",
-  usage: "Bot inv",
+  name: "Hack",
+  aliases: [],
+  description: "Hacks A User",
+  usage: "Hack",
   run: async (client, message, args) => {
     //Start
     message.delete();
@@ -14,8 +14,8 @@ module.exports = {
      const embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Invite!`)
-      .setDescription(`[Click Here](https://discord.com/api/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot)`)
-      .setFooter(`Requested By ${message.author.username}`)
+      .setDescription(`[Click Here]()`)
+      .setFooter(`Fake`)
       .setTimestamp();
 
     message.channel.send(embed);
