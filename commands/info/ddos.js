@@ -13,10 +13,7 @@ module.exports = {
     
      const embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`ddos`)
       .setDescription(`[Click Here](http://shorturl.at/nLVWX)`)
-      .setFooter(`This Is Fake Please Dont Worry`)
-      .setTimestamp();
 
     message.channel.send(embed);
     
