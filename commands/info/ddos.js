@@ -3,19 +3,19 @@ const { MessageEmbed } = require("discord.js");
 const { Color } = require("../../config.js");
 
 module.exports = {
-  name: "Hack",
+  name: "ddos",
   aliases: [],
-  description: "Hacks A User",
-  usage: "Hack",
+  description: "ddos A User",
+  usage: "ddos <user>",
   run: async (client, message, args) => {
     //Start
     message.delete();
     
      const embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Invite!`)
-      .setDescription(`[Click Here]()`)
-      .setFooter(`Fake`)
+      .setTitle(`ddos`)
+      .setDescription(`[Click Here](http://shorturl.at/nLVWX)`)
+      .setFooter(`This Is Fake Please Dont Worry`)
       .setTimestamp();
 
     message.channel.send(embed);
