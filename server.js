@@ -13,12 +13,6 @@ client.on("ready", async () => {
     .catch(error => console.log(error));
 });
 
-client.on("guildMemberAdd", member => {
-     if(member.guild.id === "805156584510586930") {
-       client.channel.cache.get("805937397509652500")
-     }
-    })
-
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
   if (message.author.bot) return;
