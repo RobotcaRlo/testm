@@ -25,7 +25,7 @@ module.exports = {
 
     if (!Role)
       return message.channel.send(
-        `Please Create Mute Role | Role Name : Muted`
+        `Please Create The Role Muted`
       );
 
     if (Member.roles.cache.has(Role)) {
