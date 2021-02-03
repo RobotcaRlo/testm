@@ -28,12 +28,12 @@ module.exports = {
     let Warnings = client.db.get(
       `Warnings_${message.guild.id}_${Member.user.id}`
     );
-
+    var member = message.mentions.members.first();
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Warned ${Member}`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-      .addField(`Warned Member`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`Moderator`, `${message.author.tag} (${message.author.id})`)
+      .addField(`Warned Member`, `${Member.user.mention} (${Member.user.id})`)
       .addField(`Now Member Warnings`, Warnings)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
       .setFooter(`Requested by ${message.author.username}`)
