@@ -31,7 +31,7 @@ module.exports = {
 
     let embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Member Warned!`)
+      .setTitle(`Warned ${Member}`)
       .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
       .addField(`Warned Member`, `${Member.user.tag} (${Member.user.id})`)
       .addField(`Now Member Warnings`, Warnings)
