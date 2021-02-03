@@ -9,7 +9,7 @@ module.exports = {
   usage: "Slowmode <Number>",
   run: async (client, message, args) => {
 
-if(!message.member.hasPermission("MANAGE_CHANNELS")) {
+if(message.member.hasPermission("MANAGE_CHANNELS")) {
     const {channel} = message
    let duration = args[0]
     if(isNaN(duration)){
