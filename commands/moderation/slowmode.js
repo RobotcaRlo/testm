@@ -3,13 +3,13 @@ const { MessageEmbed } = require("discord.js");
 const { Color } = require("../../config.js");
 
 module.exports = {
-name: "slowmode",
+  name: "slowmode",
   aliases: ["sm"],
-    description: "sets slowmode or a channel",
+  description: "sets slowmode or a channel",
   usage: "Slowmode <Number>",
   run: async (client, message, args) => {
 
-if(message.member.hasPermission("MANAGE_CHANNELS")) {
+if(!message.member.hasPermission("MANAGE_CHANNELS")) {
     const {channel} = message
    let duration = args[0]
     if(isNaN(duration)){
