@@ -25,8 +25,15 @@ module.exports = {
 
     if (!Role)
       return message.channel.send(
-        `Please Create The Role "Muted"`
+        `Please Create The Role Muted`
       );
+    
+        if (Member.id === message.author.id)
+      return message.channel.send(`You Can't Mute Your Self!`);
+    
+       if (Member.id === client.user.id)
+      return message.channel.send(`Please Don't Mute Me ;-;`);
+
 
     if (Member.roles.cache.has(Role)) {
       return message.channel.send(`Member Is Already Muted!`);
