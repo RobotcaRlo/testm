@@ -9,10 +9,8 @@ const color = "RANDOM"
 
 client.on("ready", async () => {
   console.log(`Hello Pikachu Welcome Back!`);
-  client.user
-    .setActivity(`${await client.guilds.cache.size} Servers | Simping For Pikachu | pika help  `, { type: "WATCHING" })
-    .catch(error => console.log(error));
-});
+    client.user.setPresence({ activity: { name: "pika help | ${await client.guilds.cache.size} Servers" }, status: "dnd" })
+})
 
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
