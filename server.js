@@ -5,13 +5,12 @@ const { Prefix } = require("./config.js");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
-const color = "RANDOM";
+const color = "RANDOM"
 
-client.on("ready", () => {
-console.log(`Logged in as ${client.user.tag}!`)
-  client.user.setPresence({ activity: { name: "pika help" }, status: "idle" })
+client.on("ready", async () => {
+  console.log(`Hello Pikachu Welcome Back!`);
+    client.user.setPresence({ activity: { name: "pika help | ${await client.guilds.cache.size} Servers" }, status: "dnd" })
 })
-
 
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
@@ -81,6 +80,8 @@ client.on("message", async message => {
     `User : ${message.author.tag} (${message.author.id}) Server : ${message.guild.name} (${message.guild.id}) Command : ${command.name}`
   );
 });
+
+
 
 client.login(process.env.Token);
 //https://glitch.com/edit/#!/test-bot-20201
