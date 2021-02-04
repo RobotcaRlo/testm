@@ -61,8 +61,8 @@ module.exports = {
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Member Unbanned!`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}}`)
-      .addField(`Unbanned Member`, `${Member.user.tag} (${Member.user.id}`)
+      .addField(`Moderator`, `${message.author.tag} (${message.author.id})`)
+      .addField(`Unbanned Member`, `${Member.user.tag} (${Member.user.id})`)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();

@@ -28,7 +28,7 @@ module.exports = {
     let Warnings = client.db.get(
       `Warnings_${message.guild.id}_${Member.user.id}`
     );
-    let victim = message.mentions.users.first();
+    
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Warned ${Member}`)
