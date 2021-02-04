@@ -20,7 +20,8 @@
     "quick.db": "^7.1.2",
     "ms": "^2.1.3",
     "weather-js": "^2.0.0",
-    "alexa-bot-api": "^0.2.1"
+    "alexa-bot-api": "^0.2.1",
+    "reconlx": "^1.0.462"
   },
   "engines": {
     "node": "12.x"

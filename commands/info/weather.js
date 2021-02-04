@@ -15,7 +15,8 @@ module.exports = {
     if (!args[0]) return message.channel.send("Please Give Location!");
 
     weather.find({ search: args.join(" ") }, function(error, result) {
-      if (error) return message.channel.send(`Something Went Wrong, Try Again Later!`);
+      if (error)
+        return message.channel.send(`Something Went Wrong, Try Again Later!`);
 
       if (result === undefined || result.length === 0)
         return message.channel.send(

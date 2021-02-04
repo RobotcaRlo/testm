@@ -84,6 +84,5 @@ client.on("message", async message => {
 });
 
 
-
 client.login(process.env.Token);
 //https://glitch.com/edit/#!/test-bot-20201
