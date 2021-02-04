@@ -10,7 +10,7 @@ const color = "RANDOM"
 client.on("ready", async () => {
   console.log(`Hello Pikachu Welcome Back!`);
   client.user
-    .setActivity(`${await client.guilds.cache.size} Servers | Simping For Pikachu | pika help  `, { type: "WATCHING" })
+    .setActivity(`${await client.guilds.cache.size} Servers | pika help `, { type: "WATCHING" })
     .catch(error => console.log(error));
 });
 
