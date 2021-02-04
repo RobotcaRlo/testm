@@ -8,6 +8,7 @@ module.exports = {
   description: "sets slowmode or a channel",
   usage: "Slowmode <Number>",
   run: async (client, message, args) => {
+    let cd = args[0];
     if (message.member.hasPermission("MANAGE_CHANNELS")) {
       const { channel } = message;
       let duration = args[0];
@@ -15,6 +16,13 @@ module.exports = {
         message.channel.send("Please give a valid amount of time!");
         return;
       }
+
+      if (cd > 21600) {
+        return message.channel.send(
+          "You can't set the Slowmode higher than 21600 seconds."
+        );
+      }
+
       channel.setRateLimitPerUser(duration);
       let Embed = new MessageEmbed()
         .setColor(Color)
