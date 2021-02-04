@@ -14,7 +14,7 @@ module.exports = {
       return message.channel.send(
         "*You Need The `Mute Members` Permission To Use This Command!*"
       );
-  
+
     let Member =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
@@ -31,12 +31,13 @@ module.exports = {
     if (!Member.roles.cache.has(Role)) {
       return message.channel.send(`Member Is Already Unmuted!`);
     }
+    let victim = message.mentions.users.first();
 
     let Embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Member Unmuted!`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-      .addField(`Unmuted Member`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`Moderator`, `${message.author} (${message.author.id}`)
+      .addField(`Unmuted Member`, `${victim} (${Member.user.id})`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

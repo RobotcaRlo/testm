@@ -21,31 +21,28 @@ module.exports = {
 
     if (!Member) return message.channel.send(`Please Mention A User!`);
 
-    let Role = message.guild.roles.cache.find(role => role.name === "Muted")
+    let Role = message.guild.roles.cache.find(role => role.name === "Muted");
 
-    if (!Role)
-      return message.channel.send(
-        `Please Create The Role Muted`
-      );
-    
-        if (Member.id === message.author.id)
+    if (!Role) return message.channel.send(`Please Create The Role Muted`);
+
+    if (Member.id === message.author.id)
       return message.channel.send(`You Can't Mute Your Self!`);
-    
-       if (Member.id === client.user.id)
-      return message.channel.send(`Please Don't Mute Me ;-;`);
 
+    if (Member.id === client.user.id)
+      return message.channel.send(`Please Don't Mute Me ;-;`);
 
     if (Member.roles.cache.has(Role)) {
       return message.channel.send(`Member Is Already Muted!`);
     }
 
     let Reason = args.slice(1).join(" ");
+    let victim = message.mentions.users.first();
 
     let Embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Member Muted!`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-      .addField(`Muted Member`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`Moderator`, `${message.author} (${message.author.id}`)
+      .addField(`Muted Member`, `${victim} (${Member.user.id})`)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();

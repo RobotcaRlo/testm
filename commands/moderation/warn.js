@@ -10,11 +10,11 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
     message.delete();
-     if (!message.member.hasPermission("MANAGE_ROLES"))
+    if (!message.member.hasPermission("MANAGE_ROLES"))
       return message.channel.send(
         "You Need The `Manage Roles` Members Permission To Use This Command!"
       );
-  
+
     let Member =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
@@ -28,12 +28,14 @@ module.exports = {
     let Warnings = client.db.get(
       `Warnings_${message.guild.id}_${Member.user.id}`
     );
-    
+
+    let victim = message.mentions.users.first();
+
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Member Warned`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id})`)
-      .addField(`Warned Member`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`Moderator`, `${message.author} (${message.author.id})`)
+      .addField(`Warned Member`, `${victim} (${Member.user.id})`)
       .addField(`Now Member Warnings`, Warnings)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
       .setFooter(`Requested by ${message.author.username}`)
