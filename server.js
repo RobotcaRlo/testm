@@ -10,8 +10,8 @@ const color = "RANDOM"
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user
-    .setActivity(`${await client.guilds.cache.size} Servers | pika help  `, { type: "WATCHING" })
-    .catch(error => console.log(error));
+   .setPresence({ avtivity: { name: "Among Us" }, status: "dnd" })
+   .catch(error => console.log(error));
 });
 
 client.on("message", async message => {
