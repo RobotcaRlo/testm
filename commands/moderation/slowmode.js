@@ -8,7 +8,7 @@ module.exports = {
   description: "sets slowmode or a channel",
   usage: "Slowmode <Number>",
   run: async (client, message, args) => {
-
+message.delete();
 if(message.member.hasPermission("MANAGE_CHANNELS")) {
     const {channel} = message
    let duration = args[0]
