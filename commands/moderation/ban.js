@@ -45,11 +45,12 @@ module.exports = {
       setTimeout(function() {
         User.ban({ reason: `${Reason || "No Reason Provided!"}` });
       }, 2000);
+      let victim = message.mentions.users.first();
       let embed = new Discord.MessageEmbed()
         .setColor(Color)
         .setTitle(`Member Banned!`)
-        .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-        .addField(`Banned Member`, `${Member.tag} (${Member.id})`)
+        .addField(`Moderator`, `${message.author} (${message.author.id})`)
+        .addField(`Banned Member`, `${victim} (${Member.id})`)
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
