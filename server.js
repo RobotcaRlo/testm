@@ -8,7 +8,7 @@ client.db = require("quick.db");
 const color = "RANDOM"
 
 client.on("ready", async () => {
-  console.log(`Hello Pikachu Welcome Back!`);
+  console.log(`Logged in as ${client.user.tag}!`);
   client.user
     .setActivity(`${await client.guilds.cache.size} Servers | pika help `, { type: "WATCHING" })
     .catch(error => console.log(error));
