@@ -58,13 +58,12 @@ module.exports = {
       );
     }
 
-    let victim = message.mentions.users.first();
-
+      
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Member Unbanned!`)
       .addField(`Moderator`, `${message.author} (${message.author.id}})`)
-      .addField(`Unbanned Member`, `${victim} (${Member.user.id})`)
+      .addField(`Unbanned Member`, `${Member.user.tag} (${Member.user.id})`)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
