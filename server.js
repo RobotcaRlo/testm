@@ -8,10 +8,10 @@ client.db = require("quick.db");
 const color = "RANDOM"
 
 client.on("ready", async () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`Hello Pikachu Welcome Back!`);
   client.user
-   .setPresence({ avtivity: { name: "Among Us" }, status: "dnd" })
-   .catch(error => console.log(error));
+    .setActivity(`${await client.guilds.cache.size} Servers | Simping For Pikachu | pika help  `, { type: "WATCHING" })
+    .catch(error => console.log(error));
 });
 
 client.on("message", async message => {
