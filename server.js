@@ -8,15 +8,10 @@ client.db = require("quick.db");
 const color = "RANDOM";
 
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({
-    status: "dnd", // You can show online, idle... Do not disturb is dnd
-    game: {
-      name: "pika help", // The message shown
-      type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
-    }
-  });
-});
+console.log(`Logged in as ${client.user.tag}!`)
+  client.user.setPresence({ activity: { name: "pika help" }, status: "idle" })
+})
+
 
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
