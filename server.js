@@ -5,12 +5,14 @@ const { Prefix } = require("./config.js");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
-const color = "RANDOM"
+const color = "RANDOM";
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user
-    .setActivity(`${await client.guilds.cache.size} Servers | pika help `, { type: "WATCHING" })
+    .setActivity(`${await client.guilds.cache.size} Servers | pika help `, {
+      type: "WATCHING"
+    })
     .catch(error => console.log(error));
 });
 
@@ -83,7 +85,5 @@ client.on("message", async message => {
   );
 });
 
-
 client.login(process.env.Token);
 //https://glitch.com/edit/#!/test-bot-20201
-  
