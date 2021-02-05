@@ -1,8 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
-const { Prefix } = require("./config.js");
-const color = "RANDOM";
+const { Prefix, Color} = require("./config.js");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
@@ -11,7 +10,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user
-    .setActivity(`${await client.guilds.cache.size} Servers | pika help `, {
+    .setActivity(`pika help `, {
       type: "WATCHING"
     })
     .catch(error => console.log(error));
