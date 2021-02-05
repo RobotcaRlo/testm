@@ -9,7 +9,7 @@ module.exports = {
   usage: "8ball <Text Here>",
   run: async (client, message, args) => {
     //Start
-    let sizes = [
+    let answers = [
       "As I see it, yes,",
       "Ask again later,",
       "Better not tell you now,",
@@ -35,7 +35,7 @@ module.exports = {
       message.guild.members.cache.get(args[0]) ||
       message.member;
 
-    let Result = sizes[Math.floor(Math.random() * sizes.length)];
+    let Result = answers[Math.floor(Math.random() * answers.length)];
 
     let embed = new MessageEmbed()
       .setColor(Color)
