@@ -1,11 +1,10 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
-const { Prefix, Color} = require("./config.js");
+const { Prefix, Color } = require("./config.js");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
-
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
