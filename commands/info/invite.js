@@ -15,7 +15,7 @@ module.exports = {
       .setColor(Color)
       .setTitle(`Invite!`)
       .setDescription(
-        `[Click Here]()`
+        `[Click Here](https://discord.com/api/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot)`
       )
       .setFooter(`Requested By ${message.author.username}`)
       .setTimestamp();
