@@ -14,7 +14,7 @@ module.exports = {
     //Start
 
     message.delete();
-    
+
     let Content = args.join(" ");
 
     if (!Content) return message.channel.send(`Please Give Me Text!`);
