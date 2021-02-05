@@ -2,10 +2,11 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
 const { Prefix } = require("./config.js");
+const color = "RANDOM";
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
-const color = "RANDOM";
+
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
