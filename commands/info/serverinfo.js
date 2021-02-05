@@ -27,7 +27,6 @@ module.exports = {
       .addField(`Roles Count`, Roles, true)
       .addField(`Emojis Count`, Emojis, true)
       .addField(`Members Count`, Members, true)
-      .addField(`Humans Count`, Humans, true)
       .addField(`Bots Count`, Bots, true)
       .addField(`Server Created At`, guild.createdAt.toDateString())
       .setFooter(`Requested by ${message.author.username}`)
