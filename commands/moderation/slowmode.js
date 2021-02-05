@@ -5,11 +5,12 @@ const { Color } = require("../../config.js");
 module.exports = {
   name: "slowmode",
   aliases: ["sm"],
-  description: "sets slowmode or a channel",
+  description: "sets slowmode for a channel",
   usage: "Slowmode <Number>",
   run: async (client, message, args) => {
     let cd = args[0];
-    if (message.member.hasPermission("MANAGE_CHANNELS")) {
+    if (message.member.hasPermission("MANAGE_CHANNELS"))
+    {
       const { channel } = message;
       let duration = args[0];
       if (isNaN(duration)) {
@@ -22,7 +23,7 @@ module.exports = {
           "You can't set the Slowmode higher than 21600 seconds."
         );
       }
-
+   
       channel.setRateLimitPerUser(duration);
       let Embed = new MessageEmbed()
         .setColor(Color)
