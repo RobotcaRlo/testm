@@ -18,22 +18,20 @@ module.exports = {
     const Bots = guild.members.cache.filter(member => member.user.bot).size;
 
     const embed = new MessageEmbed()
-      .setTitle(guild.name + " Information!")
+      .setTitle(guild.name + "**Information!**")
       .setColor(Color)
       .setThumbnail(guild.iconURL())
-      .addField(`Name`, guild.name, true)
-      .addField(`ID`, `${guild.id}`, true)
-      .addField(`Owner`, `${guild.owner.user.tag}`, true)
-      .addField(`Roles Count`, Roles, true)
-      .addField(`Emojis Count`, Emojis, true)
-      .addField(`Members Count`, Members, true)
-      .addField(`Bots Count`, Bots, true)
-      .addField(`Server Created At`, guild.createdAt.toDateString())
+      .addField(`**❄️ | Name**`, guild.name, true)
+      .addField(`**🆔 | ID**`, `${guild.id}`, true)
+      .addField(`**👑 | Owner**`, `${guild.owner.user.tag}`, true)
+      .addField(`**📚 | Roles Count**`, Roles, true)
+      .addField(`**🌟 | Emojis Count**`, Emojis, true)
+      .addField(`**🌐 | Members Count**`, Members, true)
+      .addField(`**🤖 | Bots Count**`, Bots, true)
+      .addField(`**🧭 | Server Created At**`, guild.createdAt.toDateString())
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 
     message.channel.send(embed);
-
-    //End
   }
 };

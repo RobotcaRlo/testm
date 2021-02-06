@@ -13,9 +13,9 @@ module.exports = {
 
     const embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Invite!`)
+      .setTitle(`**Invite!**`)
       .setDescription(
-        `[Click Here](https://discord.com/api/oauth2/authorize?client_id=800825945173917716&permissions=8&scope=bot)`
+        `[Click Me](https://discord.com/api/oauth2/authorize?client_id=803684973076414475&permissions=8&scope=bot)`
       )
       .setFooter(`Requested By ${message.author.username}`)
       .setTimestamp();

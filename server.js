@@ -10,7 +10,7 @@ client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user
     .setActivity(`>help DarkBot✨`, {
-      type: "WATCHING"
+      type: "STREAMING"
     })
     .catch(error => console.log(error));
 });
@@ -23,7 +23,7 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(`DarkBot✨ The Bot Prefix Is : ${Prefix}`);
+    return message.channel.send(`**DarkBot✨ The Bot Prefix Is : ${Prefix}**`);
   }
 });
 
