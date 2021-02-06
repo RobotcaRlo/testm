@@ -10,7 +10,10 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
     message.delete();
-    let member = message.mentions.users.first() || message.member;
+    let member =
+      message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]) ||
+      message.member;
 
     const embed = new MessageEmbed()
       .setTitle(member.user.username + " Information!")
