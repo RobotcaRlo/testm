@@ -18,7 +18,7 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
       .setColor(Color)
       .addField(
-        "Links",
+        "**🖇️ | Links**",
         `[png](${Member.user.displayAvatarURL({
           format: "png",
           dynamic: true

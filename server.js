@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user
-    .setActivity(`pika help `, {
+    .setActivity(`>help DarkBot✨`, {
       type: "WATCHING"
     })
     .catch(error => console.log(error));
@@ -23,7 +23,7 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(`Pika Pika The Bot Prefix Is : ${Prefix}`);
+    return message.channel.send(`DarkBot✨ The Bot Prefix Is : ${Prefix}`);
   }
 });
 
