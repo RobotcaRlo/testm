@@ -12,20 +12,13 @@ module.exports = {
     message.delete();
     let member = message.mentions.users.first() || message.member;
 
-    const statuses = {
-      online: "Online",
-      dnd: "Do Not Disturb",
-      idle: "Idle",
-      offline: "Offline"
-    };
-
     const embed = new MessageEmbed()
       .setTitle(member.user.username + " Information!")
       .setColor(Color)
       .setThumbnail(member.user.displayAvatarURL())
       .addField("Full Name", member.user.tag, true)
       .addField("ID", `${member.id}`, true)
-      .addField("Status", statuses[member.presence.status], true)
+      .addField("Status", member.presence.status, true)
       .addField(
         `Roles Count`,
         message.guild.members.cache.get(member.user.id).roles.cache.size ||
