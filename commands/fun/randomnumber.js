@@ -5,7 +5,6 @@ const { Color } = require("../../config.js");
 module.exports = {
   name: "randomnumber",
   aliases: ["rn"],
-  category: "fun",
   description: "Get Random Number!",
   usage: "Randomnumber",
   run: async (client, message, args) => {
