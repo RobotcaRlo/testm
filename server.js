@@ -10,7 +10,7 @@ client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user
     .setActivity(`>help DarkBot✨`, {
-      type: "STREAMING"
+      type: "WATCHING"
     })
     .catch(error => console.log(error));
 });
