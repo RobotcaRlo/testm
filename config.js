@@ -1,3 +1,3 @@
-exports.Prefix = `<`;
-exports.Token = `NzU2MjA3MjI4ODU5NDQ5MzY2.X2Oe3Q.SVYL9RPSxwkLIqx9QC-PmIrzSo8NzU2MjA3MjI4ODU5NDQ5MzY2.X2Oe3Q.SVYL9RPSxwkLIqx9QC-PmIrzSo8`;
+exports.Prefix = `1`;
+exports.Token = `NzgzODQ3NDk4NjYxNjI1ODU3.X8gs3g.cd8KERY_0OfhY5Grj3zowwFF4gU`;
 exports.Color = `RANDOM`;
